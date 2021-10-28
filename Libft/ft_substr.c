@@ -1,19 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ployola- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/18 11:08:48 by ployola-          #+#    #+#             */
-/*   Updated: 2021/10/18 11:08:49 by ployola-         ###   ########.fr       */
+/*   Created: 2021/10/28 13:19:23 by ployola-          #+#    #+#             */
+/*   Updated: 2021/10/28 13:19:25 by ployola-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-int	ft_isalnum(int c)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	if (ft_isalpha(c) && ft_isdigit(c))
-		return (1);
-	return (0);
+	size_t	i;
+	size_t	j;
+	char	*tmp;
+
+	tmp = (char *)malloc(sizeof(*s) * (len + 1));
+	if (!tmp)
+		return (NULL);
+	i = 0;
+	j = 0;
+	while (s[i])
+	{
+		if (i >= start && j < len)
+		{
+			tmp[j++] = s[i];
+		}
+		i++;
+	}
+	tmp[j] = 0;
+	return (tmp);
 }

@@ -1,19 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ployola- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/18 11:08:48 by ployola-          #+#    #+#             */
-/*   Updated: 2021/10/18 11:08:49 by ployola-         ###   ########.fr       */
+/*   Created: 2021/10/28 13:19:41 by ployola-          #+#    #+#             */
+/*   Updated: 2021/10/28 13:19:45 by ployola-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-int	ft_isalnum(int c)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	if (ft_isalpha(c) && ft_isdigit(c))
-		return (1);
-	return (0);
+	char	*str;
+	size_t	i;
+	size_t	j;
+
+	str = (char *)malloc(sizeof(*s1) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!str)
+		return (NULL);
+	i = 0;
+	j = 0;
+	while (s1[i])
+	{
+		str[j++] = s1[i++];
+	}
+	i = 0;
+	while (s2[i])
+	{
+		str[j++] = s2[i++];
+	}
+	str[j] = 0;
+	return (str);
 }
