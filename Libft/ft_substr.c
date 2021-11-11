@@ -9,7 +9,6 @@
 /*   Updated: 2021/10/28 13:19:25 by ployola-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
