@@ -13,10 +13,10 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	do
+	while (*s)
 	{
-		if (*s == (char) c)
+		if (*s++ == (char) c)
 			return (s);
-	}while (*s++);
+	}
 	return (NULL);
 }

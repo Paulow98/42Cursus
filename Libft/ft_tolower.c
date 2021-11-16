@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
-#include <unistd.h> 
-#include <ctype.h>
+
 int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')

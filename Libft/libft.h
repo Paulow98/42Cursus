@@ -9,42 +9,26 @@
 /*   Updated: 2021/10/19 12:24:13 by ployola-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 #ifndef LIBFT_H
-#define LIBFT_H
+# define LIBFT_H
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <unistd.h>
+# include <stdlib.h>
 
-typedef	struct	s_list
-{
-	void			*content;
-	struct s_list	*next;
-}				t_list;
-
-typedef struct	s_split_next
-{
-	size_t start;
-	size_t length;
-}				t_split_next;
-
-int	ft_atoi(const char *str);
+int		ft_atoi(const char *str);
 
 void	ft_bzero(void *s, size_t n);
 
 void	*ft_calloc(size_t count, size_t size);
 
-int	ft_isalnum(int c);
+int		ft_isalnum(int c);
 
-int	ft_isalpha(int c);
+int		ft_isalpha(int c);
 
-int	ft_isascii(int c);
+int		ft_isascii(int c);
 
-int	ft_isdigit(int c);
+int		ft_isdigit(int c);
 
-int	ft_isprint(int c);
+int		ft_isprint(int c);
 
 char	*ft_itoa(int n);
 
@@ -52,7 +36,7 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 
 void	*ft_memchr(const void *s, int c, size_t n);
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 
@@ -94,8 +78,8 @@ char	*ft_strtrim(char const *s1, char const *set);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 
-int	ft_tolower(int c);
+int		ft_tolower(int c);
 
-int	ft_toupper(int c);
+int		ft_toupper(int c);
 
 #endif
