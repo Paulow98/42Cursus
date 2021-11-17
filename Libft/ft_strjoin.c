@@ -9,6 +9,7 @@
 /*   Updated: 2021/10/28 13:19:45 by ployola-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)

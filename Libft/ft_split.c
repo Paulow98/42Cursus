@@ -11,6 +11,12 @@
 /* ************************************************************************** */
 #include "libft.h"
 
+typedef struct	s_split_next
+{
+	size_t start;
+	size_t length;
+}				t_split_next;
+
 static char	**ft_alloc_split(char const *s, char c)
 {
 	size_t	i;
@@ -55,7 +61,8 @@ static void	*ft_split_range(char **split, char const *s,
 	return (split);
 }
 
-static void	*ft_split_by_char(char **split, char const *s, char c)
+static void
+	*ft_split_by_char(char **split, char const *s, char c)
 {
 	size_t			i;
 	t_split_next	st;
@@ -84,14 +91,15 @@ static void	*ft_split_by_char(char **split, char const *s, char c)
 	return (split);
 }
 
-char	**ft_split(char const *s, char c)
+char
+	**ft_split(char const *s, char c)
 {
 	char	**split;
 
-	split = ft_alloc_split(s, c);
-	if (!split)
+	if (!(split = ft_alloc_split(s, c)))
 		return (NULL);
 	if (!ft_split_by_char(split, s, c))
 		return (NULL);
 	return (split);
 }
+
